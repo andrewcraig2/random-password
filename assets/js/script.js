@@ -1,29 +1,51 @@
 // Assignment code here
 function generatePassword() {
-  var chooseLowerCase = confirm("Do you want lower case")
-  var chooseUpperCase = confirm("Do you want upper case")
-  var chooseNumbers = confirm ("Do you want numbers")
+  var chooseLower = confirm("Do you want lower case")
+  var chooseUpper = confirm("Do you want upper case")
+  var chooseNumber = confirm ("Do you want numbers")
   var chooseSymbol = confirm ("Do you like symbols")
-  var upperCaseArray  = "ABCDEFGHIJKLMNOPQRSTUYWXYZ".split("")
-  var lowerCaseArray = "abcdefghijklmnopqrstuvwxyz".split("")
-  var numberArray = "0123456789".split("")
+  var upperArray  = "ABCDEFGHIJKLMNOPQRSTUYWXYZ".split("")
+  var lowerArray = "abcdefghijklmnopqrstuvwxyz".split("")
+  var numbersArray = "0123456789".split("")
   var symbolArray = "!&*$#{}=+@()?".split("")
   var choosePassLength = prompt("How long do you want password?")
   choosePassLength = parseInt(choosePassLength)
   var userChosenArray = []
+  
   if(chooseUpper) {
-    for (let index = 0; index < UpperCaseArray.length; index++) {
-      const element = UpperCaseArray[index];
+    for (let index = 0; index < upperArray.length; index++) {
+      const element = UpperArray[index];
       userChosenArray.push(element);
   }
 
 }
- if(chooseLower){
-   for (let index = 0; index < LowerCaseArray.length; index++)  {
-     const element = LowerCaseArray[index];
+ if(chooseLower) {
+   for (let index = 0; index < lowerArray.length; index++)  {
+     const element = LowerArray[index];
      userChosenArray.push(element);
    }
  }
+
+ if(chooseNumber) {
+  for (let index = 0; index < NumberArray.length; index++)  {
+    const element = numberArray[index];
+    userChosenArray.push(element);
+  }
+}
+  if (chooseSymbol) {
+  for (let index = 0; index < symbol.length; index++) {
+    const element = symbolArray[index];
+    userChosenArray.push(element)
+  }
+  console.log(userChosenArray)
+}
+var createPassword = ""
+for (let index = 0; index < choosePassLength; index++) {
+  var randomIndex = Math.floor(Math.random() * userChosenArray.length)
+  createPassword += userChosenArray[randomIndex]
+}
+return createPassword
+}
 
 
 // Get references to the #generate element
