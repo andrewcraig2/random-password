@@ -1,9 +1,9 @@
 // Assignment code here
 function generatePassword() {
-  var chooseLowerCase = confirm("Would you like lower case")
-  var chooseUpperCase = confirm("Would you like upper case")
-  var chooseNumbers = confirm ("would you like numbers")
-  var chooseSymbol = confirm ("would you like symbols")
+  var chooseLowerCase = confirm("Do you want lower case")
+  var chooseUpperCase = confirm("Do you want upper case")
+  var chooseNumbers = confirm ("Do you want numbers")
+  var chooseSymbol = confirm ("Do you like symbols")
   var upperCaseArray  = "ABCDEFGHIJKLMNOPQRSTUYWXYZ".split("")
   var lowerCaseArray = "abcdefghijklmnopqrstuvwxyz".split("")
   var numberArray = "0123456789".split("")
@@ -11,6 +11,7 @@ function generatePassword() {
   var choosePassLength = prompt("How long do you want password?")
   choosePassLength = parseInt(choosePassLength)
   var userChosenArray = []
+  if(chooseUpper)
 
 }
 
