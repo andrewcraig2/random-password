@@ -11,9 +11,19 @@ function generatePassword() {
   var choosePassLength = prompt("How long do you want password?")
   choosePassLength = parseInt(choosePassLength)
   var userChosenArray = []
-  if(chooseUpper)
+  if(chooseUpper) {
+    for (let index = 0; index < UpperCaseArray.length; index++) {
+      const element = UpperCaseArray[index];
+      userChosenArray.push(element);
+  }
 
 }
+ if(chooseLower){
+   for (let index = 0; index < LowerCaseArray.length; index++)  {
+     const element = LowerCaseArray[index];
+     userChosenArray.push(element);
+   }
+ }
 
 
 // Get references to the #generate element
